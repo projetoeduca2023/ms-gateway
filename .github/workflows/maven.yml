@@ -27,6 +27,6 @@ jobs:
 
     - name: Build Docker Image
       run: | 
-        docker build -t idpablo/education:gateway-main -f Dockerfile-serve .
+        docker build -t idpablo/education:gateway-main -f Dockerfile-gateway .
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         docker push idpablo/education:gateway-main
