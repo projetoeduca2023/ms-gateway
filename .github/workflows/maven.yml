@@ -26,7 +26,7 @@ jobs:
       uses: docker/setup-buildx-action@v1
 
     - name: Build Docker Image
-      run: | 
-        docker build -t idpablo/education:gateway-main -f Dockerfile-gateway .
+      run: |
+        docker build -t projetoeducacao/ms-core:core-main -f Dockerfile-core .
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push idpablo/education:gateway-main
+        docker push projetoeducacao/ms-core:core-main
